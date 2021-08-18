@@ -1,5 +1,7 @@
 function convert(num) { 
     if(num < 1){ return "";}
+    if(num >= 1000){ return "M" + convert(num - 1000);}
+    if(num >= 900){ return "CM" + convert(num - 900);}
     if(num >= 500){ return "D" + convert(num - 500);}
     if(num >= 400){ return "CD" + convert(num - 400);}  
     if(num >= 100){ return "C" + convert(num - 100);}
