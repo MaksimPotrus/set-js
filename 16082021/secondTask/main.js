@@ -17,19 +17,15 @@ const onClickGenerateLogin = () => {
             login = `${login}${VALID_ITEMS[random]}`;
             if (random <= 25 && isUpper != true) {
                 isUpper = true;
-                console.log('Upper' + i);
             }
             if (random > 25 && random <= 51 && isLower != true) {
                 isLower = true;
-                console.log('Lower' + i);
             }
             if (random > 51 && random <= 61 && isNumbers != true) {
                 isNumbers = true;
-                console.log('Numbers' + i);
             }
             if (random > 61 && random <= 76 && isSpecial != true) {
                 isSpecial = true;
-                console.log('Special' + i);
             }
         }
     } while (!(isUpper && isLower && isNumbers && isSpecial));
