@@ -18,8 +18,11 @@ function findChair(rooms, need) {
 }
 
 function matrixOutput(newArray, need, freeChairs){
-  for (let index = 0; index < newArray.length; index+=1) {
-    newArray[index][0] = "X";
+  let count = '';
+  for (let index = 0; index < newArray.length; index+=1){
+    for (let sindex = 0; sindex < newArray[0][index]; sindex+=1)
+      count+="X";
+    newArray[index][0] = count;
   }
   return "meeting(["+newArray+"], "+need.toString()+") ---> ["+freeChairs.toString()+"]";
 }
