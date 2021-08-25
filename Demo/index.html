@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <script src="src/task1.js"></script>
+    <script src="src/task2.js"></script>
+    <script src="src/task3.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JS Demo</h1>
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-task1-list" data-toggle="list"
+                        href="#list-task1" role="tab" aria-controls="task1">Task №1</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-task1" role="tabpanel"
+                        aria-labelledby="list-task1-list">
+
+                        <form class="form-inline" name="form1">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input type="text" class="form-control" placeholder="num">
+                                <input type="text" class="form-control" placeholder="num">
+                                <input type="text" class="form-control" placeholder="symbol">
+                            </div>
+                            <button type="button" class="btn btn-primary mb-2" onclick="chessBoardRun(0)">Run</button>
+                        </form>
+
+                        <div class="result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
