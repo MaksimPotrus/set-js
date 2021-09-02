@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    margin:30px auto;
+}
+
+.form-control{
+    width:100px !important;
+    margin:5px;
+}
+
+.result{
+    white-space: pre-wrap;
+    margin:5px auto;
+    font-size:16px;
+    font-weight: bold;
+    padding:5px 80px;
+}
+
+.form-group p{
+    margin-top:15px;
+}
+
+.triangle, #triangles{
+    width:100%;
+}
+
+.btn-bottom{
+    margin:10px 10px 0 0;
+}
+
+.btn-danger{
+    margin-top:7px;
+    padding:0 5px;
+    border-radius: 100px;
+}

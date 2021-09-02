@@ -87,3 +87,23 @@ function sortTriangle(arr, arrOfAreas) {
 
     return arrOfCopy;
 }
+
+// add one more triangle
+function addTriangle() {
+    let len = document.querySelectorAll(".triangle").length; // length collection of triangles
+    let triangles = document.getElementById('triangles'); // get div let triangles by id
+    let triangle = document.createElement('div'); // create empty triangle
+
+    triangle.className = "triangle";
+    triangle.innerHTML = `<span>Triangle ABC${len+1}: </span>`+
+        '<input type="text" class="form-control" placeholder="side A">'+
+        '<input type="text" class="form-control" placeholder="side B">'+
+        '<input type="text" class="form-control" placeholder="side C">';
+    triangles.appendChild(triangle);
+}
+
+// remove lest triangle
+function delTriangle() {
+    let triangles = document.querySelectorAll(".triangle");
+    triangles[triangles.length-1].remove(triangles[triangles.length]); // del last elem of triangle's collection
+}

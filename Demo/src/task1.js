@@ -1,5 +1,5 @@
 function chessBoard(height, width, symbol) {
-    let checkValid = isValid1(height, width, symbol);
+    let checkValid = isChessDataValid(height, width, symbol);
     if (!checkValid.status) {
         let result = "";
         for (let i = 0; i < height; i++) {
@@ -14,7 +14,7 @@ function chessBoard(height, width, symbol) {
     }
 }
 
-function isValid1(height, width, symbol) {
+function isChessDataValid(height, width, symbol) {
     if (height && width && symbol) {
         let reg = /^\d+$/;
         if (reg.test(height) && reg.test(width) && parseInt(height) && parseInt(width)) {
