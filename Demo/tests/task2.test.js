@@ -1,6 +1,5 @@
 describe('Testing task№2', function() {
 
-    // main function
     describe('Main function', function() {
         let validOpt = {
             opt_1: {
@@ -68,15 +67,14 @@ describe('Testing task№2', function() {
             assert.equal(typeof result, 'object');
         });
 
-        for (let opt in validOpt) {
-            it(`Enter correct value. Expect result ${validOpt[opt].exit}`, function () {
-                let result = envelopes(validOpt[opt].enter[0], validOpt[opt].enter[1]);
-                assert.equal(result, validOpt[opt].exit);
-            });
-        }
+        // for (let opt in validOpt) {
+        //     it(`Enter correct value. Expect result ${validOpt[opt].exit}`, function () {
+        //         let result = envelopes(validOpt[opt].enter[0], validOpt[opt].enter[1]);
+        //         assert.equal(result, validOpt[opt].exit);
+        //     });
+        // }
     });
 
-    // validation function
     describe('Validation function', function(){
         let validOpt = {
             enter: [
@@ -119,6 +117,45 @@ describe('Testing task№2', function() {
                 ],
                 exit: 'invalid'
             },
+            invalid_3: {
+                enter: [
+                    {
+                        width:1001,
+                        height:1
+                    },
+                    {
+                        width:2,
+                        height:2
+                    }
+                ],
+                exit: 'invalid'
+            },
+            invalid_3: {
+                enter: [
+                    {
+                        width:1,
+                        height:1
+                    },
+                    {
+                        width:2,
+                        height:1001
+                    }
+                ],
+                exit: 'invalid'
+            },
+            invalid_4: {
+                enter: [
+                    {
+                        width:1001,
+                        height:1
+                    },
+                    {
+                        width:2,
+                        height:2
+                    }
+                ],
+                exit: 'invalid'
+            },
             empty: {
                 enter: [
                     {
@@ -140,7 +177,7 @@ describe('Testing task№2', function() {
             h2 = validOpt.enter[1].height;
 
         it(`Enter "${w1}, ${h1}, ${w2}, ${h2}". Should return true`, function(){
-            let result = isValid2(validOpt.enter[0], validOpt.enter[1]);
+            let result = isEnvelopesValid(validOpt.enter[0], validOpt.enter[1]);
             assert.equal(result, validOpt.exit);
         });
 
@@ -151,7 +188,7 @@ describe('Testing task№2', function() {
                 h2 = invalidOpt[opt].enter[1].height;
 
             it(`Enter "${w1}, ${h1}, ${w2}, ${h2}". Expect string with error description`, function(){
-                let result = isValid2(invalidOpt[opt].enter[0], invalidOpt[opt].enter[1]);
+                let result = isEnvelopesValid(invalidOpt[opt].enter[0], invalidOpt[opt].enter[1]);
                 assert.equal(result.reason, invalidOpt[opt].exit);
             });
         }

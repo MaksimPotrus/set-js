@@ -1,27 +1,40 @@
 body{
     margin:0;
     padding:0;
+    position: absolute;
+    left: 0;
+    background: #111;
+    color: #f4f4f4;
 }
 
 h1{
     margin:30px auto;
 }
 
+.tab {
+    tab-size: 2;
+    font-weight: 400;
+    color: red; 
+}
+
 .form-control{
-    width:100px !important;
+    width:110px !important;
     margin:5px;
 }
 
 .result{
     white-space: pre-wrap;
-    margin:5px auto;
+    margin:10px auto;
     font-size:16px;
     font-weight: bold;
     padding:5px 80px;
+    color: #f4f4f4;
+
 }
 
 .form-group p{
     margin-top:15px;
+    color: rgb(255, 255, 255);
 }
 
 .triangle, #triangles{
@@ -30,10 +43,4 @@ h1{
 
 .btn-bottom{
     margin:10px 10px 0 0;
-}
-
-.btn-danger{
-    margin-top:7px;
-    padding:0 5px;
-    border-radius: 100px;
 }

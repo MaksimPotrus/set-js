@@ -17,7 +17,7 @@ function chessBoard(height, width, symbol) {
 function isChessDataValid(height, width, symbol) {
     if (height && width && symbol) {
         let reg = /^\d+$/;
-        if (reg.test(height) && reg.test(width) && parseInt(height) && parseInt(width)) {
+        if (reg.test(height) && reg.test(width) && parseInt(height) && parseInt(width) && height <= 64 && width <=64 && symbol.toString().length===1 && symbol!=" ") {
             return true;
         } else return {
             status: 'failed',

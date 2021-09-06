@@ -1,6 +1,5 @@
 describe('Testing task№3', function () {
 
-    // main function
     describe('Main function', function () {
         let validOpt = {
             enter: [
@@ -54,7 +53,6 @@ describe('Testing task№3', function () {
         });
     });
 
-    // validation function
     describe('Validation function', function () {
         let validOpt = {
             enter: [
@@ -129,20 +127,19 @@ describe('Testing task№3', function () {
         };
 
         it(`Enter correct value. Should return true`, function () {
-            let result = isValid3(validOpt.enter);
+            let result = isAreaOfTriangleValid(validOpt.enter);
             assert.equal(result, validOpt.exit);
         });
 
         for (let opt in invalidOpt) {
             it(`Enter incorrect value. Expect string with error description`, function () {
-                let result = isValid3(invalidOpt[opt].enter);
+                let result = isAreaOfTriangleValid(invalidOpt[opt].enter);
                 assert.equal(result.reason, invalidOpt[opt].exit);
             });
         }
 
     });
 
-    // function return array with areas
     describe('Function counts areas ', function () {
         let validOpt = {
             enter: [
@@ -192,7 +189,6 @@ describe('Testing task№3', function () {
 
     });
 
-    // function return sorted array
     describe('Function sorts object in array', function () {
         let validOpt = {
             opt_1: {
